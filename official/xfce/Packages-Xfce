@@ -2,33 +2,43 @@
 ### THIS FILE WILL INCLUDE shared/Packages-Desktop ###
 ######################################################
 
-## XFCE Main Packages
-accountsservice
-ffmpegthumbnailer
-gconf # fix qt-theme
-gnome-keyring # fix wlan segfault
-gufw # firewall
-libgsf       # support ODF and
-libopenraw   # RAW thumbnailing
+## Main Packages
+>openrc cronjobs
+lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-light-locker
-manjaro-settings-manager-notifier
+>systemd light-locker
+>openrc light-locker-consolekit
+manjaro-browser-settings
+manjaro-settings-manager
+tmpwatch                                # cleaning /tmp
+>openrc timeset-gui                     # MSM time module does not work with OpenRC
+ps_mem                                  # memory usage
+
+## Services
+>openrc syslog-ng-openrc
+>openrc json-c                          # for syslog-ng
+
+## Openbox
+>openrc openbox
+>openrc obconf
+>openrc obmenu
+>openrc obmenu-generator
+>openrc tint2
+>openrc lxrandr
+>openrc compton
+>openrc nitrogen
+>openrc conky
+>openrc lxappearance
+>openrc volumeicon
+>openrc python2-xdg                     # for autostart of applications in /etc/xdg/autostart
+
+## XFCE Main Packages
 manjaro-xfce-settings
-menulibre
-mugshot
-network-manager-applet
-networkmanager-openconnect
-networkmanager-openvpn
-networkmanager-pptp
-networkmanager-vpnc
-openssh
-orage
+orage                                   # for calender
 #plank
-poppler-glib
 thunar-archive-plugin
 thunar-media-tags-plugin
-xcursor-simpleandsoft
 xfce4
 #xscreensaver
 
@@ -62,37 +72,54 @@ xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 
-## Applications
-catfish # needed for desktop search
-engrampa-thunar-plugin
-firefox
-manjaro-browser-settings
-galculator-gtk2
-gimp
-gksu
+## GNOME related stuff
+gconf                                   # fix qt-theme
+gnome-keyring                           # fix wlan segfault
 gnome-vfs
-gparted
-guayadeque
 gvfs
 gvfs-afc
 gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
+python2-gnomevfs
+python2-libgnome
+
+## Applications
+accountsservice
+catfish                                 # needed for desktop search
+engrampa-thunar-plugin
+ffmpegthumbnailer
+firefox
+gufw                                    # firewall
+libgsf                                  # support ODF and
+libopenraw                              # RAW thumbnailing
+libreoffice-still
+galculator
+gimp
+gksu
+gparted
+guayadeque
 hexchat
-manjaro-welcome
+menulibre
 #midori
 mlocate
 mousepad
+mugshot
+>systemd openssh
+>openrc openssh-openrc
 open-fuse-iso
 p7zip
 #parole
 pidgin
+qbittorrent
 #evince
 #raktpdf
 qpdfview
 qpdfview-djvu-plugin
 qpdfview-ps-plugin
-poppler-data  # CKJ support for pdf
+poppler-data                            # CJK support for pdf
+poppler-glib
+screenfetch
 thunderbird
 viewnior
 vlc
@@ -103,66 +130,49 @@ yelp
 
 ## Network
 blueman
-netctl
-networkmanager
-networkmanager-dispatcher-ntpd
-openresolv
+>systemd netctl
+>systemd networkmanager
+>openrc networkmanager-consolekit
+>systemd networkmanager-dispatcher-ntpd
+>systemd networkmanager-pptp
+>systemd networkmanager-openconnect
+>openrc networkmanager-openrc
+networkmanager-openvpn
+>systemd networkmanager-vpnc
+network-manager-applet
+>systemd openresolv
+#>openrc openresolv-openrc              # AUR
+>openrc openvpn-openrc
 #samba
 #thunar-shares-plugin-manjaro
 
-## Artwork
-manjaro-backgrounds
->systemd plymouth-theme-manjaro-elegant
-xcursor-vanilla-dmz-aa
-
-## Packages for Sound and Audio
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gstreamer0.10-bad-plugins
-gstreamer0.10-base-plugins
-gstreamer0.10-good-plugins
-gstreamer0.10-ugly-plugins
-flashplugin
-libdvdcss
-manjaro-alsa
-manjaro-pulse
-pavucontrol
-pa-applet
-pulseaudio-bluetooth
-pulseaudio-ctl
-pulseaudio-zeroconf
+## Sound and Audio
+alsa-plugins
+>systemd gst-libav
+>systemd gst-plugins-bad
+>systemd gst-plugins-base
+>systemd gst-plugins-good
+>systemd gst-plugins-ugly
+>systemd libdvdcss
+>systemd manjaro-alsa
+>systemd manjaro-pulse
+>systemd pavucontrol
+>systemd pa-applet
+>systemd pulseaudio-bluetooth
+>systemd pulseaudio-ctl
+>systemd pulseaudio-gconf
+>systemd pulseaudio-zeroconf
 
 ## Package management
 pamac
 
-## Games
-steam-manjaro
-
-## Fonts
-#adobe-source-sans-pro-fonts
-cantarell-fonts
-
-## Java
-jre8-openjdk
-jre8-openjdk-headless
-icedtea-web
-
-## Printing
-manjaro-printer
-
-## Office
-#abiword
-#gnumeric
-libreoffice-still
-
-## AUR Access
+## AUR Access && Build && Development
 autoconf
 automake
+base-devel
 binutils
 bison
+cmake
 fakeroot
 flex
 gcc
@@ -175,5 +185,20 @@ patch
 subversion
 yaourt
 
+## Artwork
+manjaro-backgrounds
+>systemd plymouth-theme-manjaro-elegant
+xcursor-vanilla-dmz-aa
+xcursor-simpleandsoft
+
+## Fonts
+#adobe-source-sans-pro-fonts
+cantarell-fonts
+
+## Printing
+manjaro-printer
+system-config-printer
+
 ## Documentation
 manjaro-documentation
+manjaro-welcome
