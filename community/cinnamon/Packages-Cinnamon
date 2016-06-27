@@ -2,127 +2,166 @@
 ### THIS FILE WILL INCLUDE shared/Packages-Desktop ###
 ######################################################
 
-## Cinnamon
-baobab
-blueberry
+## Main Packages
+>openrc cronjobs
+dconf
 dconf-editor
-evince
-poppler-data # CKJ support for pdf
-ffmpegthumbnailer
-gimp
-gksu
-manjaro-cinnamon-settings
+desktop-file-utils
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+>systemd light-locker
+>openrc light-locker-consolekit
 manjaro-browser-settings
-mousepad
-nemo-fileroller # archiver
+manjaro-settings-manager
+tmpwatch                                # cleaning /tmp
+>openrc timeset-gui                     # MSM time module does not work with OpenRC
+ps_mem                                  # memory usage
+
+## Services
+>openrc syslog-ng-openrc
+>openrc json-c                          # for syslog-ng
+
+## Openbox
+>openrc openbox
+>openrc obconf
+>openrc obmenu
+>openrc obmenu-generator
+>openrc tint2
+>openrc lxrandr
+>openrc compton
+>openrc nitrogen
+>openrc conky
+>openrc lxappearance
+>openrc volumeicon
+>openrc python2-xdg                     # for autostart of applications in /etc/xdg/autostart
+
+## Cinnamon Main Packages
+manjaro-cinnamon-settings
+nemo-fileroller                         # archiver
 nemo-preview
 nemo-python
 nemo-share
-pragha # musicplayer
-screenfetch
-transmission-gtk
-xdg-user-dirs-gtk
-
-## java
-jre8-openjdk
-icedtea-web
-jre8-openjdk-headless
 
 ## GNOME related stuff
-gnome-system-log
+baobab
 eog
 eog-plugins
-gedit
 gnome-disk-utility
 gnome-keyring
 gnome-screenshot
+gnome-system-log
 gnome-system-monitor
 gnome-terminal
 gnome-vfs
-icon-naming-utils
-mousetweaks
-python2-gnomecanvas
-python2-gnomevfs
-python2-libgnome
-
-# needed
-python-ptyprocess
-python2-ptyprocess
-
-## Network
-netctl
-net-tools
-networkmanager-dispatcher-ntpd
-openresolv
-
-## Internet
-firefox
-thunderbird
-
-## Extra
-npapi-vlc
-pidgin-libnotify
-
-## Artwork
-cinnamon-wallpapers
-flattr-icon-theme
-plymouth-theme-manjaro-cinnamon
-xcursor-maia
-
-## Other Applications
-exfat-utils
-fuse-exfat
-galculator
-gcolor2
-gparted
 gvfs-afc
 gvfs-google
 gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
+python2-gnomecanvas
+python2-gnomevfs
+python2-libgnome
+
+## Applications
+clipit                                  # parcellite fork
+evince
+exfat-utils
+ffmpegthumbnailer
+firefox
+fuse-exfat
+galculator
+gcolor2
+gimp
+gksu
+gparted
 hexchat
+icon-naming-utils
 isousb
+k3b
 libgsf
-lightdm-gtk-greeter-settings
-manjaro-documentation
-manjaro-settings-manager-notifier
-manjaro-welcome
+libreoffice-fresh
+mousepad
 mugshot
 nss
-numlockx
-openssh
+>systemd openssh
+>openrc openssh-openrc
 p7zip
-parcellite
-pavucontrol
+pidgin
+poppler-data                            # CJK support for pdf
+python-ptyprocess
+python2-ptyprocess
+qbittorrent
+screenfetch
+thunderbird
 udiskie
 udisks
+vlc
+xdg-user-dirs-gtk
+
+## Network
+blueberry
+>systemd netctl
+>systemd net-tools
+>openrc networkmanager-consolekit
+>systemd networkmanager-dispatcher-ntpd
+>systemd networkmanager-openconnect
+>openrc networkmanager-openrc
+networkmanager-openvpn
+>systemd networkmanager-vpnc
+network-manager-applet
+>systemd openresolv
+#>openrc openresolv-openrc  # AUR
+>openrc openvpn-openrc
+
+## Sound and Audio
+alsa-plugins
+>systemd gst-libav
+>systemd gst-plugins-bad
+>systemd gst-plugins-base
+>systemd gst-plugins-good
+>systemd gst-plugins-ugly
+libdvdcss
+>systemd manjaro-alsa
+>systemd manjaro-pulse
+>systemd pavucontrol
+>systemd pulseaudio-bluetooth
+>systemd pulseaudio-ctl
+>systemd pulseaudio-gconf
+>systemd pulseaudio-zeroconf
 
 ## Package management
 pamac
+
+## AUR Access && Build && Development
+autoconf
+automake
+base-devel
+binutils
+bison
+cmake
+fakeroot
+flex
+gcc
+>multilib gcc-multilib
+git
+libtool
+m4
+make
+patch
+subversion
 yaourt
 
-## Packages for Sound and Audio
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gstreamer0.10-bad-plugins
-gstreamer0.10-base-plugins
-gstreamer0.10-good-plugins
-gstreamer0.10-ugly-plugins
-libdvdcss
-manjaro-alsa
-manjaro-pulse
-pulseaudio-bluetooth
-pulseaudio-ctl
-pulseaudio-gconf
-pulseaudio-zeroconf
+## Artwork
+cinnamon-wallpapers
+flattr-icon-theme
+>systemd plymouth-theme-manjaro-cinnamon
+xcursor-maia
 
-## Office
-libreoffice-still
+## Printing
 manjaro-printer
 system-config-printer
 
-## AUR Access
-base-devel
+## Documentation
+manjaro-documentation
+manjaro-welcome
