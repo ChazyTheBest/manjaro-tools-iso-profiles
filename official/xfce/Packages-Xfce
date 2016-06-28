@@ -4,6 +4,7 @@
 
 ## Main Packages
 >openrc cronjobs
+dconf
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
@@ -16,6 +17,10 @@ tmpwatch                                # cleaning /tmp
 ps_mem                                  # memory usage
 
 ## Services
+>systemd cups
+>openrc cups-openrc
+>systemd openssh
+>openrc openssh-openrc
 >openrc syslog-ng-openrc
 >openrc json-c                          # for syslog-ng
 
@@ -39,31 +44,39 @@ orage                                   # for calender
 #plank
 thunar-archive-plugin
 thunar-media-tags-plugin
+thunar-volman                           # for usb auto-mounting
 xfce4
 #xscreensaver
 
 ## XFCE Extra Packages
+>openrc xfce4-appfinder
 #xfce4-artwork
-xfce4-battery-plugin
+#xfce4-battery-plugin
 xfce4-clipman-plugin
-xfce4-cpufreq-plugin
-xfce4-cpugraph-plugin
+#xfce4-cpufreq-plugin
+#xfce4-cpugraph-plugin
 #xfce4-datetime-plugin
-xfce4-dict
-xfce4-diskperf-plugin
-xfce4-fsguard-plugin
-xfce4-genmon-plugin
-xfce4-mailwatch-plugin
-xfce4-mount-plugin
-xfce4-mpc-plugin
-xfce4-netload-plugin
-xfce4-notes-plugin
+#xfce4-dict
+#xfce4-diskperf-plugin
+#xfce4-fsguard-plugin
+#xfce4-genmon-plugin
+#xfce4-mailwatch-plugin
+>openrc xfce4-mixer
+#xfce4-mount-plugin
+#xfce4-mpc-plugin
+#xfce4-netload-plugin
+#xfce4-notes-plugin
 xfce4-notifyd
+>openrc xfce4-panel
+>openrc xfce4-power-manager
 xfce4-screenshooter
-xfce4-sensors-plugin
-xfce4-smartbookmark-plugin
-xfce4-systemload-plugin
+#xfce4-sensors-plugin
+>openrc xfce4-session
+>openrc xfce4-settings
+#xfce4-smartbookmark-plugin
+#xfce4-systemload-plugin
 xfce4-taskmanager
+>openrc xfce4-terminal
 xfce4-time-out-plugin
 xfce4-timer-plugin
 xfce4-verve-plugin
@@ -71,9 +84,11 @@ xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
+>openrc xfdesktop
+>openrc xfwm4
 
 ## GNOME related stuff
-gconf                                   # fix qt-theme
+gconf                                   # fix qt-theme DEPRECATED
 gnome-keyring                           # fix wlan segfault
 gnome-vfs
 gvfs
@@ -95,21 +110,19 @@ libgsf                                  # support ODF and
 libopenraw                              # RAW thumbnailing
 libreoffice-still
 galculator
+gcolor2
 gimp
 gksu
 gparted
-guayadeque
+#guayadeque
 hexchat
 menulibre
-#midori
 mlocate
 mousepad
 mugshot
->systemd openssh
->openrc openssh-openrc
 open-fuse-iso
 p7zip
-#parole
+parole
 pidgin
 qbittorrent
 #evince
@@ -122,6 +135,7 @@ poppler-glib
 screenfetch
 thunderbird
 viewnior
+vim
 vlc
 xfburn
 #xnoise
@@ -130,6 +144,7 @@ yelp
 
 ## Network
 blueman
+>openrc bluez-openrc                    # bluetooth
 >systemd netctl
 >systemd networkmanager
 >openrc networkmanager-consolekit
@@ -146,14 +161,8 @@ network-manager-applet
 #samba
 #thunar-shares-plugin-manjaro
 
-## Sound and Audio
-alsa-plugins
->systemd gst-libav
->systemd gst-plugins-bad
->systemd gst-plugins-base
->systemd gst-plugins-good
->systemd gst-plugins-ugly
->systemd libdvdcss
+## Sound
+>openrc alsa-plugins
 >systemd manjaro-alsa
 >systemd manjaro-pulse
 >systemd pavucontrol
@@ -163,8 +172,19 @@ alsa-plugins
 >systemd pulseaudio-gconf
 >systemd pulseaudio-zeroconf
 
+## Multimedia
+gst-libav
+>systemd gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+>systemd gst-plugins-ugly
+libdvdcss
+mpg123                                  # for parole
+
 ## Package management
+downgrade
 pamac
+subversion
 
 ## AUR Access && Build && Development
 autoconf
@@ -176,28 +196,28 @@ cmake
 fakeroot
 flex
 gcc
->multilib gcc-multilib
 git
 libtool
 m4
 make
 patch
-subversion
 yaourt
+
+## 32-bit Apps Support for x86_64
+>multilib gcc-multilib
 
 ## Artwork
 manjaro-backgrounds
 >systemd plymouth-theme-manjaro-elegant
 xcursor-vanilla-dmz-aa
-xcursor-simpleandsoft
+#xcursor-simpleandsoft
 
 ## Fonts
-#adobe-source-sans-pro-fonts
 cantarell-fonts
 
 ## Printing
-manjaro-printer
-system-config-printer
+>systemd manjaro-printer
+>systemd system-config-printer
 
 ## Documentation
 manjaro-documentation

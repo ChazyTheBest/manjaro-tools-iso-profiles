@@ -4,7 +4,6 @@
 
 ## Main Packages
 >openrc cronjobs
-dconf
 dconf-editor
 desktop-file-utils
 lightdm
@@ -19,6 +18,10 @@ tmpwatch                                # cleaning /tmp
 ps_mem                                  # memory usage
 
 ## Services
+>systemd cups
+>openrc cups-openrc
+>systemd openssh
+>openrc openssh-openrc
 >openrc syslog-ng-openrc
 >openrc json-c                          # for syslog-ng
 
@@ -115,13 +118,7 @@ network-manager-applet
 >openrc openvpn-openrc
 
 ## Sound and Audio
-alsa-plugins
->systemd gst-libav
->systemd gst-plugins-bad
->systemd gst-plugins-base
->systemd gst-plugins-good
->systemd gst-plugins-ugly
-libdvdcss
+>openrc alsa-plugins
 >systemd manjaro-alsa
 >systemd manjaro-pulse
 >systemd pavucontrol
@@ -130,8 +127,19 @@ libdvdcss
 >systemd pulseaudio-gconf
 >systemd pulseaudio-zeroconf
 
+## Multimedia
+gst-libav
+>systemd gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+>systemd gst-plugins-ugly
+libdvdcss
+mpg123                                  # for parole
+
 ## Package management
+downgrade
 pamac
+subversion
 
 ## AUR Access && Build && Development
 autoconf
@@ -143,14 +151,15 @@ cmake
 fakeroot
 flex
 gcc
->multilib gcc-multilib
 git
 libtool
 m4
 make
 patch
-subversion
 yaourt
+
+## 32-bit Apps Support for x86_64
+>multilib gcc-multilib
 
 ## Artwork
 cinnamon-wallpapers
@@ -158,9 +167,12 @@ flattr-icon-theme
 >systemd plymouth-theme-manjaro-cinnamon
 xcursor-maia
 
+## 32-bit apps support for x86_64
+>multilib gcc-multilib
+
 ## Printing
-manjaro-printer
-system-config-printer
+>systemd manjaro-printer
+>systemd system-config-printer
 
 ## Documentation
 manjaro-documentation
