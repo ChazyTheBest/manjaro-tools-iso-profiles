@@ -24,20 +24,6 @@ ps_mem                                  # memory usage
 >openrc syslog-ng-openrc
 >openrc json-c                          # for syslog-ng
 
-## Openbox
->openrc openbox
->openrc obconf
->openrc obmenu
->openrc obmenu-generator
->openrc tint2
->openrc lxrandr
->openrc compton
->openrc nitrogen
->openrc conky
->openrc lxappearance
->openrc volumeicon
->openrc python2-xdg                     # for autostart of applications in /etc/xdg/autostart
-
 ## XFCE Main Packages
 manjaro-xfce-settings
 orage                                   # for calender
@@ -49,43 +35,44 @@ xfce4
 #xscreensaver
 
 ## XFCE Extra Packages
->openrc xfce4-appfinder
+xfce4-appfinder
 #xfce4-artwork
->systemd xfce4-battery-plugin
+xfce4-battery-plugin
 xfce4-clipman-plugin
->systemd xfce4-cpufreq-plugin
->systemd xfce4-cpugraph-plugin
->systemd xfce4-datetime-plugin
->systemd xfce4-dict
->systemd xfce4-diskperf-plugin
->systemd xfce4-fsguard-plugin
->systemd xfce4-genmon-plugin
->systemd xfce4-mailwatch-plugin
->openrc xfce4-mixer
->systemd xfce4-mount-plugin
->systemd xfce4-mpc-plugin
->systemd xfce4-netload-plugin
->systemd xfce4-notes-plugin
+xfce4-cpufreq-plugin
+xfce4-cpugraph-plugin
+xfce4-datetime-plugin
+xfce4-dict
+xfce4-diskperf-plugin
+xfce4-fsguard-plugin
+xfce4-genmon-plugin
+xfce4-mailwatch-plugin
+xfce4-mixer
+xfce4-mount-plugin
+xfce4-mpc-plugin
+xfce4-netload-plugin
+xfce4-notes-plugin
 xfce4-notifyd
->openrc xfce4-panel
->openrc xfce4-power-manager
+xfce4-panel
+xfce4-power-manager
+xfce4-pulseaudio-plugin
 xfce4-screenshooter
->systemd xfce4-sensors-plugin
->openrc xfce4-session
->openrc xfce4-settings
->systemd xfce4-smartbookmark-plugin
->systemd xfce4-systemload-plugin
+xfce4-sensors-plugin
+xfce4-session
+xfce4-settings
+xfce4-smartbookmark-plugin
+xfce4-systemload-plugin
 xfce4-taskmanager
->openrc xfce4-terminal
->systemd xfce4-time-out-plugin
->systemd xfce4-timer-plugin
->systemd xfce4-verve-plugin
->systemd xfce4-wavelan-plugin
->systemd xfce4-weather-plugin
+xfce4-terminal
+xfce4-time-out-plugin
+xfce4-timer-plugin
+xfce4-verve-plugin
+xfce4-wavelan-plugin
+xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
->openrc xfdesktop
->openrc xfwm4
+xfdesktop
+xfwm4
 
 ## GNOME related stuff
 gconf                                   # fix qt-theme DEPRECATED
@@ -103,19 +90,20 @@ python2-libgnome
 accountsservice
 catfish                                 # needed for desktop search
 engrampa-thunar-plugin
+#evince
 ffmpegthumbnailer
 firefox
-gufw                                    # firewall
-libgsf                                  # support ODF and
-libopenraw                              # RAW thumbnailing
-libreoffice-still
 galculator
 gcolor2
 gimp
 gksu
 gparted
-#guayadeque
+gufw                                    # firewall
 hexchat
+libgsf                                  # support ODF and
+libopenraw                              # RAW thumbnailing
+libreoffice-still
+isousb
 menulibre
 mlocate
 mousepad
@@ -124,14 +112,12 @@ open-fuse-iso
 p7zip
 parole
 pidgin
-qbittorrent
-#evince
-#raktpdf
+poppler-data                            # CJK support for pdf
+poppler-glib
 qpdfview
 qpdfview-djvu-plugin
 qpdfview-ps-plugin
-poppler-data                            # CJK support for pdf
-poppler-glib
+#raktpdf
 screenfetch
 thunderbird
 viewnior
@@ -162,22 +148,22 @@ network-manager-applet
 #thunar-shares-plugin-manjaro
 
 ## Sound
->openrc alsa-plugins
->systemd manjaro-alsa
->systemd manjaro-pulse
->systemd pavucontrol
->systemd pa-applet
->systemd pulseaudio-bluetooth
->systemd pulseaudio-ctl
->systemd pulseaudio-gconf
->systemd pulseaudio-zeroconf
+alsa-plugins
+manjaro-alsa
+manjaro-pulse
+pavucontrol
+pa-applet
+pulseaudio-bluetooth
+pulseaudio-ctl
+pulseaudio-gconf
+pulseaudio-zeroconf
 
 ## Multimedia
 gst-libav
->systemd gst-plugins-bad
+gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
->systemd gst-plugins-ugly
+gst-plugins-ugly
 libdvdcss
 mpg123                                  # for parole
 
@@ -216,8 +202,8 @@ xcursor-vanilla-dmz-aa
 cantarell-fonts
 
 ## Printing
->systemd manjaro-printer
->systemd system-config-printer
+manjaro-printer
+system-config-printer
 
 ## Documentation
 manjaro-documentation
