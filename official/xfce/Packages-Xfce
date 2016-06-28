@@ -51,37 +51,37 @@ xfce4
 ## XFCE Extra Packages
 >openrc xfce4-appfinder
 #xfce4-artwork
-#xfce4-battery-plugin
+>systemd xfce4-battery-plugin
 xfce4-clipman-plugin
-#xfce4-cpufreq-plugin
-#xfce4-cpugraph-plugin
-#xfce4-datetime-plugin
-#xfce4-dict
-#xfce4-diskperf-plugin
-#xfce4-fsguard-plugin
-#xfce4-genmon-plugin
-#xfce4-mailwatch-plugin
+>systemd xfce4-cpufreq-plugin
+>systemd xfce4-cpugraph-plugin
+>systemd xfce4-datetime-plugin
+>systemd xfce4-dict
+>systemd xfce4-diskperf-plugin
+>systemd xfce4-fsguard-plugin
+>systemd xfce4-genmon-plugin
+>systemd xfce4-mailwatch-plugin
 >openrc xfce4-mixer
-#xfce4-mount-plugin
-#xfce4-mpc-plugin
-#xfce4-netload-plugin
-#xfce4-notes-plugin
+>systemd xfce4-mount-plugin
+>systemd xfce4-mpc-plugin
+>systemd xfce4-netload-plugin
+>systemd xfce4-notes-plugin
 xfce4-notifyd
 >openrc xfce4-panel
 >openrc xfce4-power-manager
 xfce4-screenshooter
-#xfce4-sensors-plugin
+>systemd xfce4-sensors-plugin
 >openrc xfce4-session
 >openrc xfce4-settings
-#xfce4-smartbookmark-plugin
-#xfce4-systemload-plugin
+>systemd xfce4-smartbookmark-plugin
+>systemd xfce4-systemload-plugin
 xfce4-taskmanager
 >openrc xfce4-terminal
-xfce4-time-out-plugin
-xfce4-timer-plugin
-xfce4-verve-plugin
-xfce4-wavelan-plugin
-xfce4-weather-plugin
+>systemd xfce4-time-out-plugin
+>systemd xfce4-timer-plugin
+>systemd xfce4-verve-plugin
+>systemd xfce4-wavelan-plugin
+>systemd xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 >openrc xfdesktop
