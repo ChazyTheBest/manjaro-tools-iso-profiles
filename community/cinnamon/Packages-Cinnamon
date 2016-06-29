@@ -6,8 +6,6 @@
 >openrc cronjobs
 dconf-editor
 desktop-file-utils
-lightdm
-lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 >systemd light-locker
 >openrc light-locker-consolekit
