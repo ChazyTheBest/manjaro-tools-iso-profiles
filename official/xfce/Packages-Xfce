@@ -5,8 +5,6 @@
 ## Main Packages
 >openrc cronjobs
 dconf
-lightdm
-lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 >systemd light-locker
 >openrc light-locker-consolekit
@@ -114,6 +112,7 @@ parole
 pidgin
 poppler-data                            # CJK support for pdf
 poppler-glib
+qbittorrent
 qpdfview
 qpdfview-djvu-plugin
 qpdfview-ps-plugin
